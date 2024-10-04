@@ -1,0 +1,102 @@
+/* We will use Roboto font, because I think it looks quite nice :) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Let's define a bunch of universal properties */
+:root {
+    /* Background colors */
+    --bg-primary: #1f1f1f;
+    --bg-secondary: #38383d;
+
+    /* Foreground colors */
+    --fg-primary: #fff;
+    --fg-secondary: #ddd;
+    --fg-tertiary: #aaa;
+
+    /* Font sizes */
+    --fs-base: 1rem;
+    --fs-h1: calc(var(--fs-base) * 2);
+    --fs-h2: calc(var(--fs-base) * 1.75);
+    --fs-h3: calc(var(--fs-base) * 1.5);
+    --fs-h4: calc(var(--fs-base) * 1.25);
+    --fs-h5: calc(var(--fs-base) * 1);
+    --fs-nav: calc(var(--fs-base) * 1.15);
+
+    /* Hovering transition */
+    --tr-hover: all 0.2s ease-in;
+}
+
+/* Remove default margins and paddings from the body element */
+body {
+    /* Body contains three elements: nav, main and footer.
+       For alignment reasons let's use grid for now to make footer stick to the bottom */
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+}
+
+/* Text element styles */
+span, h1, h2, h3, h4, h5, p, a, b, i, li {
+    font-family: "Roboto", sans-serif;
+    font-size: var(--fs-base);
+    color: var(--fg-primary);
+}
+
+/** Remove bullets from <li> elements **/
+li { list-style-type: none }
+
+/** Heading element font sizes **/
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+h4 { font-size: var(--fs-h4) }
+h5 { font-size: var(--fs-h5) }
+
+/** Disable anchor tag's decoration and add hover transitions **/
+a {
+    text-decoration: none;
+    transition: var(--tr-hover);
+}
+
+a:hover { color: var(--fg-tertiary) }
+
+/* Navbar and footer styling */
+/** In principle navbar and footer have basically the same styles 
+    with some alignment related differences. I.e. footer is sticky while navbar is not.
+    Also footer aligns it's children in the center while navbar doesn't.
+ **/
+nav, footer {
+    padding: 5px 1rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+}
+
+/** Navbar specific styling **/
+nav { justify-content: space-between; }
+
+/*** Let's make nav-container text slightly bigger ***/
+.nav-container > a, .nav-container > span { font-size: var(--fs-nav) }
+
+/*** OnHover animation effect for profile icon ***/
+.profile {
+    fill: var(--fg-primary);
+    transition: var(--tr-hover);
+}
+
+.profile:hover { fill: var(--fg-tertiary) }
+
+/** Footer specific styling **/
+footer {
+    position: sticky;
+    bottom: 0;
+    justify-content: center;
+}
+
+.footer-container { 
+    margin: 0 1rem; 
+    text-align: center;
+}
+
