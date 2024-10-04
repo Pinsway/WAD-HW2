@@ -142,3 +142,115 @@ footer {
     max-width: 100%;
     max-height: 100%;
 }
+
+/* Post creation container styling */
+.post-creation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    width: 75%;
+    max-width: 500px;
+    margin: 0.5rem auto;
+    margin-top: 150px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-tertiary);
+}
+
+
+/* Styling for the text area in addPost */
+textarea {
+    width: 98%;
+    text-align: center;
+    color: white;
+    resize: none;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+}
+
+
+/* Styling for file upload button */
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    background-color: var(--bg-primary);
+    display: inline-block;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--bg-secondary);
+}
+
+.post-creation > button {
+    background-color: var(--bg-primary);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-creation > button:hover {
+    background-color: var(--bg-secondary);
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 75%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-tertiary);
+}
+
+.login > a:hover {
+    color: cyan;
+    cursor: pointer;
+}
+
+.login input {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+    margin: auto;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    
+}
+
+.login button {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(29, 29, 243);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.login button:hover {
+    background-color: rgb(2, 2, 128);
+    cursor: pointer;
+}
+
+
+

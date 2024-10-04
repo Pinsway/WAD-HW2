@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Post</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
+    <nav>
+        <div class = "nav-container">
+            <a href="/">Home</a>
+        </div>
+
+        <div class = "nav-container">
+            <a href="/login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    
+    <main>
+
+        <div class="post-creation" id="post-creation-container">
+            
+            <label for="textArea">
+                <p>Post body</p>
+            </label>
+            
+            <textarea id="textArea" rows="4" placeholder="Enter desired text-content"></textarea>
+
+            <label for="fileArea" class="custom-file-upload"> <p>Select file</p> </label>
+
+            <input id="fileArea" type="file"/>
+            
+            <button type="button" onclick="window.location.href='index.html'"> <p>Create post</p> </button>
+            
+        </div>
+
+    </main>
     
 </body>
 </html>
