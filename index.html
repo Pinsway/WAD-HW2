@@ -32,7 +32,7 @@
         <!-- Despite the name, post-container class can be used for anything that needs to be centered 
              like login forms or post forms. 
         -->
-        <div class="post-container">
+        <div class="post-container" id="post-1">
             <!-- Post container header with some additional information like the day of posting-->
             <header>
                 <a href="/">
@@ -56,6 +56,130 @@
                 <!-- Message -->
                 <div class="post-message">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+            <!-- Container class for stats, but for now it contains only the like button -->
+            <div class="post-stats">
+                <button class="btn-transparent">
+                    <img src="img/thumbs-up.svg" alt="Like" height="32" width="32">
+                </button>
+            </div>
+        </div>
+
+        <div class="post-container" id="post-2">
+            <!-- Post container header with some additional information like the day of posting-->
+            <header>
+                <a href="/">
+                    <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                </a>
+                <b>Thursday Oct 3rd 2024</b>
+            </header>
+            <!-- Actual post content divisor. Posts may or may not contain images.
+             -->
+            <div class="post-content">
+                <!-- Message -->
+                <div class="post-message">
+                    <p>Tartu is an interesting place</p>
+                </div>
+            </div>
+            <!-- Container class for stats, but for now it contains only the like button -->
+            <div class="post-stats">
+                <button class="btn-transparent">
+                    <img src="img/thumbs-up.svg" alt="Like" height="32" width="32">
+                </button>
+            </div>
+        </div>
+
+        <div class="post-container" id="post-3">
+            <!-- Post container header with some additional information like the day of posting-->
+            <header>
+                <a href="/">
+                    <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                </a>
+                <b>Wednesday Oct 2nd 2024</b>
+            </header>
+            <!-- Actual post content divisor. Posts may or may not contain images.
+             -->
+            <div class="post-content" id="post-4">
+                <!-- Image preview divisor. -->
+                <div class="post-img-preview">
+                    <a href="/img/kuva.jpg" target="_blank">
+                        <img src="/img/thumbnails/kuva_s.jpg" alt="Image"/>
+                    </a>
+                </div>
+                <!-- Message -->
+                <div class="post-message">
+                    <p>See pilt läheb väga kõvasti!</p>
+                </div>
+            </div>
+            <!-- Container class for stats, but for now it contains only the like button -->
+            <div class="post-stats">
+                <button class="btn-transparent">
+                    <img src="img/thumbs-up.svg" alt="Like" height="32" width="32">
+                </button>
+            </div>
+        </div>
+
+        <div class="post-container" id="post-5">
+            <!-- Post container header with some additional information like the day of posting-->
+            <header>
+                <a href="/">
+                    <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                </a>
+                <b>Tuesday Oct 1st 2024</b>
+            </header>
+            <!-- Actual post content divisor. Posts may or may not contain images.
+             -->
+            <div class="post-content">
+                <!-- Message -->
+                <div class="post-message">
+                    <p>Does anybody know where the lecture takes place</p>
+                </div>
+            </div>
+            <!-- Container class for stats, but for now it contains only the like button -->
+            <div class="post-stats">
+                <button class="btn-transparent">
+                    <img src="img/thumbs-up.svg" alt="Like" height="32" width="32">
+                </button>
+            </div>
+        </div>
+
+        <div class="post-container">
+            <!-- Post container header with some additional information like the day of posting-->
+            <header>
+                <a href="/">
+                    <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                </a>
+                <b>Monday Sep 31st 2024</b>
+            </header>
+            <!-- Actual post content divisor. Posts may or may not contain images.
+             -->
+            <div class="post-content">
+                <!-- Image preview divisor. -->
+                <div class="post-img-preview">
+                    <a href="/img/sneed.png" target="_blank">
+                        <img src="/img/thumbnails/sneed_s.png" alt="Image"/>
+                    </a>
+                </div>
+                <!-- Message -->
+                <div class="post-message">
+                    <p>The joke is that the place is called "Sneed's Feed & Seed" which is clever in itself and quite funny to those with a mature sense of humour but what's really just hilarious about it is that if you look closely at the front of this store, Sneed's Feed & Seed, you can see a line that reads "Formerly Chuck's". Now, this might go over the average viewer's head as this, THIS, is peak comedy. I doubt anything will ever be as funny as the joke about Sneed's Feed & Seed. Are you ready for this one? So, like I said, the place is called "Sneed's Feed & Seed" and this sign says "Formerly Chuck's", which means that when Chuck owned the place, well, I don't have to tell you...</p>
                 </div>
             </div>
             <!-- Container class for stats, but for now it contains only the like button -->
