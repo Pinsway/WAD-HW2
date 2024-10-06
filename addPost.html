@@ -13,7 +13,7 @@
             <a href="/">Home</a>
         </div>
 
-        <div class = "nav-container">
+        <div class="nav-container">
             <a href="/login.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -24,23 +24,13 @@
     </nav>
     
     <main>
-
-        <div class="post-creation" id="post-creation-container">
-            
-            <label for="textArea">
-                <p>Post body</p>
-            </label>
-            
-            <textarea id="textArea" rows="4" placeholder="Enter desired text-content"></textarea>
-
-            <label for="fileArea" class="custom-file-upload"> <p>Select file</p> </label>
-
+        <form method="GET" action="/" id="post-creation-container">
+            <label for="textArea">Post body</label>
+            <textarea id="textArea" rows="4" placeholder="Your message"></textarea>
+            <label for="fileArea" class="custom-file-upload">Select file</label>
             <input id="fileArea" type="file"/>
-            
-            <button type="button" onclick="window.location.href='index.html'"> <p>Create post</p> </button>
-            
+            <input type="submit" value="Create post" class="button">
         </div>
-
     </main>
     
 </body>

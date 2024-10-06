@@ -26,16 +26,18 @@
     </nav>
     
     <main>
-
-        <div class="login" id="login-container">
+        <form method="GET" action="/">
             <h1>Welcome to PostIt</h1>
             <a>Create an account</a>
-            <p>or<br>Please log in</p>
-            <input type="text" id="username" placeholder="Enter your username">
-            <input type="text" id="password" placeholder="Enter your password">
-            <button type="login" onclick="window.location.href='index.html'">Log in</button>
-            <a>Forgot password?</a>
-        </div>
+            <span>
+                or<br>
+                Please log in
+            </span>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <input type="submit" class="button" value="Login"/>
+            <a href="/login.html">Forgot password?</a>
+        </form>
 
     </main>
 
