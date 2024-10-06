@@ -107,7 +107,7 @@ footer {
 
 /* Post container styling */
 .post-container {
-    width: 75%;
+    width: calc(100% - 2 * 0.75rem);
     max-width: 500px;
     margin: 0.5rem auto;
     padding: 0.5rem;
@@ -141,6 +141,30 @@ footer {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+}
+
+/* Vertical grid container class using flexbox */
+.v-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Sidebar class, which just wastes 200px of your screen space */
+.sidebar {
+    width: 200px;
+    height: calc(100% - 1rem);
+    margin: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    background-color: var(--bg-secondary);
+}
+
+/** On mobile devices, don't show sidebars and make post-container width smaller */
+@media (max-width: 800px) {
+    .post-container { width: 75%; }
+    .sidebar { display: none }
 }
 
 
