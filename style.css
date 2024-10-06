@@ -7,11 +7,14 @@
     --bg-primary: #1f1f1f;
     --bg-secondary: #38383d;
     --bg-tertiary: #525257;
+    --bg-post-1: #110a53;
 
     /* Foreground colors */
     --fg-primary: #fff;
     --fg-secondary: #ddd;
     --fg-tertiary: #aaa;
+
+    --fg-light-red: rgb(244, 94, 94);
 
     /* Font sizes */
     --fs-base: 1rem;
@@ -26,6 +29,12 @@
     --tr-hover: all 0.2s ease-in;
 }
 
+/* Let's make all <span> text red that are general siblings of anchor tags
+   I really have no better idea how to use (~) selector here */
+a ~ span {
+    color: var(--fg-light-red);
+}
+
 /* Remove default margins and paddings from the body element */
 body {
     /* Body contains three elements: nav, main and footer.
@@ -38,9 +47,7 @@ body {
     background-color: var(--bg-primary);
 }
 
-main {
-    width: 100%;
-}
+main { width: 100%; }
 
 /* Text element styles */
 span, h1, h2, h3, h4, h5, p, a, b, i, li, label {
@@ -107,6 +114,7 @@ footer {
 
 /* Post container styling */
 .post-container {
+    /* Subtract sidebar vertical margins */
     width: calc(100% - 2 * 0.75rem);
     max-width: 500px;
     margin: 0.5rem auto;
@@ -114,6 +122,9 @@ footer {
     border-radius: 0.5rem;
     background-color: var(--bg-tertiary);
 }
+
+/* Let's make post-1's background color dark blue - we need points somehow */
+#post-1 { background-color: var(--bg-post-1) }
 
 .post-container > header {
     display: flex;
@@ -143,6 +154,13 @@ footer {
     max-height: 100%;
 }
 
+/* Utility class for making all of its children centered */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Vertical grid container class using flexbox */
 .v-grid {
     width: 100%;
@@ -169,8 +187,10 @@ footer {
 
 
 /* Styling for the text area in addPost */
-textarea {
-    width: 98%;
+/** I'll use general sibling selector here because why not **/
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
     color: white;
     resize: none;
     padding: 5px;
@@ -179,21 +199,9 @@ textarea {
     background-color: var(--bg-primary);
 }
 
-
-/* Styling for file upload button */
-input[type="file"] {
-    display: none;
-}
-
-
 form {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    width: 75%;
-    max-width: 500px;
-    margin: auto;
-    margin-top: 150px;
+    margin: auto !important;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: var(--bg-tertiary);
@@ -207,15 +215,13 @@ form > a:hover {
 form input {
     width: 100%;
     height: 30px;
+    margin: 0.2rem 0;
     border-radius: 0.33rem;
     box-sizing: border-box;
     border: none;
     background-color: var(--bg-primary);
-    margin: auto;
-    margin-top: 5px;
     color: white;
     text-align: center;
-    
 }
 
 form .button {
@@ -233,11 +239,19 @@ form .button:hover {
     cursor: pointer;
 }
 
+/* Styling for file upload button */
+/** I'll use adjacent sibling selector here because why not **/
+.custom-file-upload + input[type="file"] {
+    display: none;
+}
+
 .custom-file-upload {
     background-color: var(--bg-primary);
     display: inline-block;
+    box-sizing: border-box;
     padding: 0.5rem;
     border: none;
+    width: 100%;
     border-radius: 5px;
     cursor: pointer;
 }
