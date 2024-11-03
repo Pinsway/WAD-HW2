@@ -34,6 +34,7 @@
                 Please log in
             </span>
             <input type="text" id="username" name="username" placeholder="Enter your username">
+            <input type="email" id="email" name="email" placeholder="Enter your email">
             <input type="password" id="password" name="password" placeholder="Enter your password">
             <input type="submit" class="button" value="Login"/>
             <a href="/WAD-HW2/login.html">Forgot password?</a>
@@ -59,6 +60,23 @@
             <li>ik ik very cool right :3</li>
         </ul>
     </footer>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Stopping the default form submission behavior
+        
+            // Get input info
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+        
+            // Save info to localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+        
+            // redirect user to main page (index.html)
+            window.location.href = "/WAD-HW2/index.html";
+        });
+        </script>
+        
 </body>
 
 </html>
