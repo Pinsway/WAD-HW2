@@ -1,4 +1,13 @@
 /**
+ * Toggles the visibility of the dropdown menu
+ */
+function toggleDropdown() {
+    const dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    console.log("Clicked toggleDropdown()")
+}
+
+/**
  * Utility function which creates the post-container DOM element from given data
  * @param {Object} post - specifies the json post object 
  * @returns a parent DOM element for given post
