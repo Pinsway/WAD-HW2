@@ -1,3 +1,8 @@
+/**
+ * Utility function which creates the post-container DOM element from given data
+ * @param {Object} post - specifies the json post object 
+ * @returns a parent DOM element for given post
+ */
 function createPostElement(post) {
     let parent = document.createElement('div');
     parent.classList.add("post-container");
@@ -14,7 +19,8 @@ function createPostElement(post) {
     </a>
     `;
     let timestamp = document.createElement("time");
-    timestamp.innerText = Date.parse(post.created_at).toLocaleString();
+    let date = new Date(post.created_at)
+    timestamp.innerText = date.toLocaleDateString() + " " + date.toLocaleTimeString();
     header.appendChild(timestamp);
 
     // the actual post content
@@ -28,6 +34,7 @@ function createPostElement(post) {
 
         let previewTarget = document.createElement("a");
         previewTarget.setAttribute("href", post.image_path);
+        previewTarget.setAttribute("target", "_blank")
 
         let thumbnailPath = post.image_path.replace('^(\/WAD-HW\d\/img)\/([A-Za-z0-9_\-]+)\.(jpg|png|gif)$', '$1/thumbnails/$2_s\.$3')
         let thumbnailElement = document.createElement("img");
@@ -58,6 +65,9 @@ function createPostElement(post) {
     return parent;
 }
 
+/**
+ * Retrieves data about posts from a remote JSON file
+ */
 async function getData() {
     // const url = "https://api.jsonbin.io/v3/b/672799c5acd3cb34a8a1de6b"
     const url = "/WAD-HW2/contents.JSON"
