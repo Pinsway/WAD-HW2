@@ -50,10 +50,14 @@ body {
 main { width: 100%; }
 
 /* Text element styles */
-span, h1, h2, h3, h4, h5, p, a, b, i, li, label {
+span, h1, h2, h3, h4, h5, p, a, b, i, li, label, time {
     font-family: "Roboto", sans-serif;
     font-size: var(--fs-base);
     color: var(--fg-primary);
+}
+
+time {
+    font-weight: 900;
 }
 
 /** Remove bullets from <li> elements **/
