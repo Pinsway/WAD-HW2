@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW 1 | Home</title>
+    <title>HW 2 | Home</title>
     <link rel="stylesheet" href="/WAD-HW2/style.css">
     <script src="/WAD-HW2/script.js"></script>
 </head>
@@ -19,9 +19,9 @@
         </div>
 
         <div class="nav-container">
-            <a href="/WAD-HW2/login.html">
+            <a href="#" id="userProfileAnchor">
                 <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16" onclick="toggleDropdown()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
@@ -101,11 +101,6 @@
         </ul>
     </footer>
     <script>
-        function toggleDropdown() {
-            const dropdown = document.getElementById("dropdownMenu");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-        
         document.addEventListener("DOMContentLoaded", function() {
             // get info from localStorage
             const username = localStorage.getItem("username");
@@ -114,6 +109,12 @@
             // show info in dropdown menu
             document.getElementById("displayUsername").textContent = username || "Guest";
             document.getElementById("displayEmail").textContent = email || "guest@example.com";
+
+            if (username == null) {
+                document.getElementById("userProfileAnchor").setAttribute("href", "/WAD-HW2/login.html")
+            } else {
+                document.getElementById("userProfileAnchor").setAttribute("href", "javascript:toggleDropdown()")
+            }
         });
         
         // Function to clear info and exit
