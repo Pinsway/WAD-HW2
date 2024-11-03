@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Post</title>
-    <link rel="stylesheet" href="/WAD-HW1/style.css">
+    <link rel="stylesheet" href="/WAD-HW2/style.css">
 </head>
 
 <body>
     <nav>
         <div class = "nav-container">
-            <a href="/WAD-HW1">Home</a>
+            <a href="/WAD-HW2">Home</a>
         </div>
 
         <div class="nav-container">
-            <a href="/WAD-HW1/login.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+            <a href="/WAD-HW2/login.html">
+                <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16" onclick="toggleDropdown()">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <p>Username: <span id="displayUsername"></span></p>
+                    <p>Email: <span id="displayEmail"></span></p>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </div>
             </a>
         </div>
     </nav>
@@ -52,5 +59,28 @@
             <li>ik ik very cool right :3</li>
         </ul>
     </footer>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            // get info from localStorage
+            const username = localStorage.getItem("username");
+            const email = localStorage.getItem("email");
+        
+            // show info in dropdown menu
+            document.getElementById("displayUsername").textContent = username || "Guest";
+            document.getElementById("displayEmail").textContent = email || "guest@example.com";
+        });
+        
+        // Function to clear info and exit
+        document.getElementById("logout").addEventListener("click", function() {
+            localStorage.removeItem("username");
+            localStorage.removeItem("email");
+            window.location.href = "/WAD-HW2/login.html";
+        });
+        </script>
 </body>
 </html>

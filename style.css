@@ -260,4 +260,33 @@ form .button:hover {
     background-color: var(--bg-secondary);
 }
 
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--bg-secondary);
+    color: var(--fg-primary);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu p, .dropdown-menu a {
+    margin: 5px 0;
+    color: var(--fg-primary);
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: var(--fg-tertiary);
+}
+
 

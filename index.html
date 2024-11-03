@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW 1 | Home</title>
-    <link rel="stylesheet" href="/WAD-HW1/style.css">
+    <title>HW 2 | Home</title>
+    <link rel="stylesheet" href="/WAD-HW2/style.css">
 </head>
 
 <body>
@@ -13,16 +13,23 @@
         <div class="nav-container">
             <a href="/">Home</a>
             <span>|</span>
-            <a href="/WAD-HW1/addPost.html">Add post</a>
+            <a href="/WAD-HW2/addPost.html">Add post</a>
         </div>
 
         <div class="nav-container">
-            <a href="/WAD-HW1/login.html">
+            <a href="/WAD-HW2/login.html">
                 <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16" onclick="toggleDropdown()">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <p>Username: <span id="displayUsername"></span></p>
+                    <p>Email: <span id="displayEmail"></span></p>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </div>
+                
             </a>
         </div>
      </nav>
@@ -40,7 +47,7 @@
             <div class="post-container" id="post-1">
                 <!-- Post container header with some additional information like the day of posting-->
                 <header>
-                    <a href="/WAD-HW1/">
+                    <a href="/WAD-HW2/">
                         <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -54,8 +61,8 @@
                 <div class="post-content">
                     <!-- Image preview divisor. -->
                     <div class="post-img-preview">
-                        <a href="/WAD-HW1/img/anime-irl.jpg" target="_blank">
-                            <img src="/WAD-HW1/img/thumbnails/anime-irl_s.jpg" alt="Image"/>
+                        <a href="/WAD-HW2/img/anime-irl.jpg" target="_blank">
+                            <img src="/WAD-HW2/img/thumbnails/anime-irl_s.jpg" alt="Image"/>
                         </a>
                     </div>
                     <!-- Message -->
@@ -66,7 +73,7 @@
                 <!-- Container class for stats, but for now it contains only the like button -->
                 <div class="post-stats">
                     <button class="btn-transparent">
-                        <img src="/WAD-HW1/img/thumbs-up.svg" alt="Like" height="32" width="32">
+                        <img src="/WAD-HW2/img/thumbs-up.svg" alt="Like" height="32" width="32">
                     </button>
                 </div>
             </div>
@@ -74,7 +81,7 @@
             <div class="post-container" id="post-2">
                 <!-- Post container header with some additional information like the day of posting-->
                 <header>
-                    <a href="/WAD-HW1/">
+                    <a href="/WAD-HW2/">
                         <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -94,7 +101,7 @@
                 <!-- Container class for stats, but for now it contains only the like button -->
                 <div class="post-stats">
                     <button class="btn-transparent">
-                        <img src="/WAD-HW1/img/thumbs-up.svg" alt="Like" height="32" width="32">
+                        <img src="/WAD-HW2/img/thumbs-up.svg" alt="Like" height="32" width="32">
                     </button>
                 </div>
             </div>
@@ -102,7 +109,7 @@
             <div class="post-container" id="post-3">
                 <!-- Post container header with some additional information like the day of posting-->
                 <header>
-                    <a href="/WAD-HW1/">
+                    <a href="/WAD-HW2/">
                         <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -116,8 +123,8 @@
                 <div class="post-content" id="post-4">
                     <!-- Image preview divisor. -->
                     <div class="post-img-preview">
-                        <a href="/WAD-HW1/img/kuva.jpg" target="_blank">
-                            <img src="/WAD-HW1/img/thumbnails/kuva_s.jpg" alt="Image"/>
+                        <a href="/WAD-HW2/img/kuva.jpg" target="_blank">
+                            <img src="/WAD-HW2/img/thumbnails/kuva_s.jpg" alt="Image"/>
                         </a>
                     </div>
                     <!-- Message -->
@@ -128,7 +135,7 @@
                 <!-- Container class for stats, but for now it contains only the like button -->
                 <div class="post-stats">
                     <button class="btn-transparent">
-                        <img src="/WAD-HW1/img/thumbs-up.svg" alt="Like" height="32" width="32">
+                        <img src="/WAD-HW2/img/thumbs-up.svg" alt="Like" height="32" width="32">
                     </button>
                 </div>
             </div>
@@ -136,7 +143,7 @@
             <div class="post-container" id="post-5">
                 <!-- Post container header with some additional information like the day of posting-->
                 <header>
-                    <a href="/WAD-HW1/">
+                    <a href="/WAD-HW2/">
                         <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -156,7 +163,7 @@
                 <!-- Container class for stats, but for now it contains only the like button -->
                 <div class="post-stats">
                     <button class="btn-transparent">
-                        <img src="/WAD-HW1/img/thumbs-up.svg" alt="Like" height="32" width="32">
+                        <img src="/WAD-HW2/img/thumbs-up.svg" alt="Like" height="32" width="32">
                     </button>
                 </div>
             </div>
@@ -164,7 +171,7 @@
             <div class="post-container">
                 <!-- Post container header with some additional information like the day of posting-->
                 <header>
-                    <a href="/WAD-HW1/">
+                    <a href="/WAD-HW2/">
                         <!-- Source: https://icons.getbootstrap.com/icons/person-circle/ -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-person-circle profile" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -179,7 +186,7 @@
                     <!-- Image preview divisor. -->
                     <div class="post-img-preview">
                         <a href="/img/sneed.png" target="_blank">
-                            <img src="/WAD-HW1/img/thumbnails/sneed_s.png" alt="Image"/>
+                            <img src="/WAD-HW2/img/thumbnails/sneed_s.png" alt="Image"/>
                         </a>
                     </div>
                     <!-- Message -->
@@ -190,7 +197,7 @@
                 <!-- Container class for stats, but for now it contains only the like button -->
                 <div class="post-stats">
                     <button class="btn-transparent">
-                        <img src="/WAD-HW1/img/thumbs-up.svg" alt="Like" height="32" width="32">
+                        <img src="/WAD-HW2/img/thumbs-up.svg" alt="Like" height="32" width="32">
                     </button>
                 </div>
             </div>
@@ -220,5 +227,30 @@
             <li>ik ik very cool right :3</li>
         </ul>
     </footer>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            // get info from localStorage
+            const username = localStorage.getItem("username");
+            const email = localStorage.getItem("email");
+        
+            // show info in dropdown menu
+            document.getElementById("displayUsername").textContent = username || "Guest";
+            document.getElementById("displayEmail").textContent = email || "guest@example.com";
+        });
+        
+        // Function to clear info and exit
+        document.getElementById("logout").addEventListener("click", function() {
+            localStorage.removeItem("username");
+            localStorage.removeItem("email");
+            window.location.href = "/WAD-HW2/login.html";
+        });
+        </script>
+        
+        
 </body>
 </html>
